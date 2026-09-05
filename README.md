@@ -1,3 +1,5 @@
-# Video → Audio V4
+# Video → Audio V5
 
-Four-page colourful workflow: Upload → Trim → Convert → Download.
+Four colourful pages: Upload → Trim → Convert → Download.
+
+Preview Selection now plays only the selected section. FFmpeg uses blob URLs for better Safari compatibility.

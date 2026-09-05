@@ -1,58 +1,36 @@
-<!doctype html>
-<html><head>
+<!doctype html><html><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#6d28d9"><meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Video → Audio"><link rel="apple-touch-icon" href="icon-180.png">
-<link rel="manifest" href="manifest.webmanifest"><title>Video → Audio</title>
+<meta name="theme-color" content="#6d28d9"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Video → Audio">
+<link rel="apple-touch-icon" href="icon.svg"><link rel="manifest" href="manifest.webmanifest"><title>Video → Audio</title>
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#fff;background:linear-gradient(135deg,#111827,#312e81);min-height:100vh}
-main{max-width:620px;margin:auto;padding:18px 16px 30px}.top{display:flex;justify-content:space-between;align-items:center}.brand{font-weight:800;font-size:22px}
-.progress{display:flex;gap:6px;margin:18px 0}.dot{height:7px;flex:1;border-radius:9px;background:#ffffff33}.dot.on{background:#fff}
-.page{display:none;min-height:72vh;flex-direction:column;justify-content:center}.page.active{display:flex}.badge{display:inline-block;padding:7px 12px;border-radius:20px;background:#ffffff22;font-weight:800;align-self:flex-start}
-h1{font-size:40px;margin:12px 0 8px}.sub{color:#ddd;font-size:18px;line-height:1.4;margin-bottom:28px}
-.card{background:#ffffff12;border:1px solid #ffffff22;border-radius:24px;padding:20px;backdrop-filter:blur(12px)}
-button,select,input{font:inherit}button{border:0;border-radius:15px;padding:16px 18px;font-weight:800;cursor:pointer}
-.primary{width:100%;background:#fff;color:#111}.secondary{width:100%;margin-top:12px;background:#ffffff1c;color:#fff}
-input[type=file]{display:none}.filebtn{display:block;text-align:center;background:#c026d3;color:#fff;padding:17px;border-radius:15px;font-weight:800}
-.row{display:flex;gap:10px}.field{flex:1}.field label{display:block;color:#ddd;font-size:13px;margin-bottom:5px}input[type=number],select{width:100%;padding:13px;border-radius:12px;border:1px solid #ffffff33;background:#111827;color:#fff}
-input[type=range]{width:100%;accent-color:#f59e0b}.timeline{margin:20px 0}
-.format{display:flex;gap:9px;flex-direction:column}.format button{background:#ffffff12;color:#fff;text-align:left;border:1px solid #ffffff22}.format button.sel{background:#1683ff;border-color:#fff}
-.status{margin-top:15px;color:#ddd;white-space:pre-wrap}.error{color:#ffaaaa}.ok{color:#a7f3b0}
-.bigicon{font-size:70px;text-align:center;margin-bottom:15px}.filebox{padding:16px;border-radius:16px;background:#0002;margin-bottom:18px}
-a.download{display:block;text-align:center;padding:17px;border-radius:15px;background:#22c55e;color:#fff;text-decoration:none;font-weight:800}
-.small{color:#bbb;font-size:13px;margin-top:12px}
-</style></head><body><main>
-<div class="top"><div class="brand">Video → Audio</div><div id="stepText">1 / 4</div></div><div class="progress"><i class="dot on"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i></div>
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#fff;background:#5b21b6;min-height:100vh}.app{max-width:650px;margin:auto;min-height:100vh;padding:18px 16px 30px}.top{display:flex;justify-content:space-between;align-items:center;font-weight:800}.brand{font-size:21px}.step{background:#ffffff28;padding:7px 12px;border-radius:18px}.progress{display:flex;gap:6px;margin:16px 0}.dot{height:7px;flex:1;border-radius:9px;background:#ffffff40}.dot.on{background:#fff}.page{display:none;min-height:calc(100vh - 120px);padding-top:30px}.page.active{display:block}body.orange{background:#f97316}body.blue{background:#0369a1}body.green{background:#047857}.badge{display:inline-block;background:#ffffff28;padding:8px 13px;border-radius:20px;font-weight:900}h1{font-size:43px;margin:14px 0 4px}.sub{font-size:18px;margin:0 0 25px}.card{background:#ffffffeF;color:#182033;border-radius:24px;padding:20px;box-shadow:0 12px 35px #0002}.dark{background:#17102ccc;color:#fff}.center{text-align:center}.big{font-size:75px;margin:8px}.choose{display:block;text-align:center;background:linear-gradient(90deg,#d946ef,#a855f7);color:#fff;padding:17px;border-radius:15px;font-weight:900}input[type=file]{display:none}.row{display:flex;gap:10px}.field{flex:1}.field label{font-size:13px;font-weight:700;color:#555;display:block;margin-bottom:5px}input[type=number]{width:100%;padding:12px;border:1px solid #ddd;border-radius:12px}input[type=range]{width:100%;accent-color:#f97316}.timeline{margin:20px 0}button{border:0;border-radius:15px;padding:16px;width:100%;font:inherit;font-weight:800;margin-top:10px}.orangebtn{background:#ff8a00;color:#fff}.next{background:#fff;color:#111}.format{display:grid;gap:9px}.format button{margin:0;background:#f5f7fb;color:#172033;text-align:left;border:2px solid transparent}.format button.selected{border-color:#1683ff;background:#eaf4ff}.convert{background:#087ff5;color:#fff;margin-top:15px}.status{margin-top:15px;color:#555;white-space:pre-wrap}.error{color:#b91c1c}.ok{color:#15803d}video{width:100%;border-radius:16px;margin-bottom:15px;background:#000}audio{width:100%;margin-top:12px}.filebox{background:#f4f6f8;border-radius:16px;padding:15px;margin-top:15px}.download{display:block;text-align:center;text-decoration:none;background:#22c55e;color:#fff;padding:17px;border-radius:15px;font-weight:900;margin-top:14px}.again{background:#efffee;color:#126b35}.small{color:#666;font-size:13px}.privacy{color:#ddd;text-align:center;font-size:13px;margin-top:15px}
+</style></head><body><div class="app">
+<div class="top"><div class="brand">Video → Audio</div><div class="step" id="step">STEP 1 OF 4</div></div><div class="progress"><i class="dot on"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i></div>
 
-<section class="page active" id="p1"><span class="badge">STEP 1</span><h1>Upload</h1><p class="sub">Choose the video you want to turn into an audio file.</p>
-<div class="card"><div class="bigicon">☁️</div><label class="filebtn">📁 Choose Video<input id="file" type="file" accept="video/*"></label><div id="info" class="small">Your video stays on your device.</div></div></section>
+<section id="p1" class="page active"><span class="badge">STEP 1 OF 4</span><h1>UPLOAD</h1><p class="sub">Choose your video</p><div class="card dark center"><div class="big">☁️</div><label class="choose">🎞️ Choose Video<input id="file" type="file" accept="video/*"></label><div id="info" class="privacy">Your files stay on your device.</div></div></section>
 
-<section class="page" id="p2"><span class="badge">STEP 2</span><h1>Trim</h1><p class="sub">Choose exactly which part of the video you want.</p>
-<div class="card"><div class="row"><div class="field"><label>Start</label><input id="start" type="number" min="0" step=".1" value="0"></div><div class="field"><label>End</label><input id="end" type="number" min="0" step=".1" value="30"></div></div>
+<section id="p2" class="page"><span class="badge">STEP 2 OF 4</span><h1>TRIM</h1><p class="sub">Select the part you want</p><div class="card">
+<video id="vid" controls playsinline hidden></video><div class="row"><div class="field"><label>Start</label><input id="start" type="number" min="0" step=".1" value="0"></div><div class="field"><label>End</label><input id="end" type="number" min="0" step=".1" value="30"></div></div>
 <div class="timeline"><input id="sr" type="range" min="0" max="30" step=".1" value="0"><input id="er" type="range" min="0" max="30" step=".1" value="30"></div>
-<button class="primary" id="prev">▶ Preview Selection</button></div></section>
+<button id="preview" class="orangebtn">▶ Preview Selection</button><button id="toConvert" class="next">Continue to Convert →</button></div></section>
 
-<section class="page" id="p3"><span class="badge">STEP 3</span><h1>Convert</h1><p class="sub">Pick a format and convert the selected audio.</p>
-<div class="card"><div class="format">
-<button data-f="m4a" class="sel">🎵 <b>M4A</b> — Best for iPhone</button>
-<button data-f="mp3">🎵 <b>MP3</b> — Universal format</button>
-<button data-f="wav">🎵 <b>WAV</b> — Highest quality</button></div>
-<button class="primary" id="go" style="margin-top:16px">Trim & Convert</button><div id="status" class="status">Converter loads when you press the button.</div></div></section>
+<section id="p3" class="page"><span class="badge">STEP 3 OF 4</span><h1>CONVERT</h1><p class="sub">Convert video to audio</p><div class="card"><div class="center" style="font-size:60px">🎵</div><div class="format">
+<button data-f="m4a" class="selected">🎵 <b>M4A</b><br><span class="small">Best for iPhone</span></button><button data-f="mp3">🎵 <b>MP3</b><br><span class="small">Universal format</span></button><button data-f="wav">🎵 <b>WAV</b><br><span class="small">Highest quality</span></button></div>
+<button id="go" class="convert">Trim & Convert 🚀</button><div id="status" class="status">The converter loads only when you press the button.</div></div></section>
 
-<section class="page" id="p4"><span class="badge">STEP 4</span><h1>Download</h1><p class="sub">Your audio is ready.</p>
-<div class="card"><div class="bigicon">✅</div><div id="result" class="filebox">Conversion complete.</div><audio id="audio" controls style="width:100%"></audio><div id="save" style="margin-top:15px"></div><button class="secondary" id="again">＋ Convert Another Video</button></div></section>
-</main>
+<section id="p4" class="page"><span class="badge">STEP 4 OF 4</span><h1>DOWNLOAD</h1><p class="sub">Save your audio</p><div class="card"><div class="center" style="font-size:75px">✅</div><h2 class="center">Conversion Complete!</h2><div id="result" class="filebox"></div><audio id="audio" controls></audio><div id="save"></div><button id="again" class="again">＋ Convert Another Video</button></div></section>
+</div>
 <script>
-const $=id=>document.getElementById(id);let file,src,dur=30,fmt="m4a",outUrl;
-function page(n){document.querySelectorAll(".page").forEach((x,i)=>x.classList.toggle("active",i===n-1));document.querySelectorAll(".dot").forEach((x,i)=>x.classList.toggle("on",i<n));$("stepText").textContent=n+" / 4";window.scrollTo(0,0)}
-$("file").onchange=()=>{file=$("file").files[0];if(!file)return;src=URL.createObjectURL(file);let v=document.createElement("video");v.preload="metadata";v.src=src;v.onloadedmetadata=()=>{dur=v.duration;["end","er"].forEach(x=>$(x).max=dur);let e=Math.min(30,dur);$("end").value=e;$("er").value=e;$("info").textContent=file.name+" • "+(file.size/1048576).toFixed(1)+" MB • "+dur.toFixed(1)+"s";page(2)}};
-$("sr").oninput=()=>$("start").value=$("sr").value;$("er").oninput=()=>$("end").value=$("er").value;
-$("start").onchange=()=>$("sr").value=$("start").value;$("end").onchange=()=>$("er").value=$("end").value;
-$("prev").onclick=()=>{let v=document.createElement("video");v.src=src;v.controls=true;v.style.width="100%";v.currentTime=+$("start").value;v.play().catch(()=>{});let old=$("pv");if(old)old.remove();v.id="pv";$("prev").after(v)};
-document.querySelectorAll("[data-f]").forEach(b=>b.onclick=()=>{document.querySelectorAll("[data-f]").forEach(x=>x.classList.remove("sel"));b.classList.add("sel");fmt=b.dataset.f});
-$("prev").onclick=()=>{page(3)};
-async function loadFF(){ $("status").textContent="Loading converter…";const {FFmpeg}=await import("https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.12.10/dist/esm/index.js");let f=new FFmpeg();await f.load({coreURL:"https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.10/dist/umd/ffmpeg-core.js"});return f}
-$("go").onclick=async()=>{try{$("go").disabled=true;let f=await loadFF();$("status").textContent="Converter loaded. Processing…";let ext=(file.name.match(/\.[^.]+$/)||[".mp4"])[0],inp="input"+ext;await f.writeFile(inp,new Uint8Array(await file.arrayBuffer()));let s=+$("start").value,e=+$("end").value,len=Math.max(.1,e-s),out="output."+fmt,args;if(fmt==="wav")args=["-ss",s,"-i",inp,"-t",len,"-vn","-ac","2","-ar","44100",out];else if(fmt==="mp3")args=["-ss",s,"-i",inp,"-t",len,"-vn","-c:a","libmp3lame","-q:a","2",out];else args=["-ss",s,"-i",inp,"-t",len,"-vn","-c:a","aac","-b:a","192k",out];await f.exec(args);let data=await f.readFile(out),mime=fmt==="wav"?"audio/wav":fmt==="mp3"?"audio/mpeg":"audio/mp4";outUrl=URL.createObjectURL(new Blob([data.buffer],{type:mime}));$("audio").src=outUrl;$("result").textContent=out;$("save").innerHTML='<a class="download" href="'+outUrl+'" download="'+out+'">⬇ Save / Download</a>';page(4)}catch(e){$("status").textContent="Converter failed: "+e.message;$("status").className="status error"}finally{$("go").disabled=false}};
-$("again").onclick=()=>{location.reload()};
-if("serviceWorker"in navigator)navigator.serviceWorker.register("./sw.js").catch(()=>{});
+const $=id=>document.getElementById(id);let file,src,dur=30,fmt="m4a",stopAt=0;
+function page(n){document.querySelectorAll(".page").forEach((x,i)=>x.classList.toggle("active",i===n-1));document.querySelectorAll(".dot").forEach((x,i)=>x.classList.toggle("on",i<n));$("step").textContent=`STEP ${n} OF 4`;document.body.className=n===2?"orange":n===3?"blue":n===4?"green":"";scrollTo(0,0)}
+$("file").onchange=()=>{file=$("file").files[0];if(!file)return;src=URL.createObjectURL(file);let v=document.createElement("video");v.preload="metadata";v.src=src;v.onloadedmetadata=()=>{dur=v.duration;$("start").max=$("sr").max=dur;$("end").max=$("er").max=dur;let e=Math.min(30,dur);$("end").value=e;$("er").value=e;$("info").textContent=`${file.name} • ${(file.size/1048576).toFixed(1)} MB • ${dur.toFixed(1)}s`;$("vid").src=src;page(2)}};
+$("sr").oninput=()=>$("start").value=Number($("sr").value).toFixed(1);$("er").oninput=()=>$("end").value=Number($("er").value).toFixed(1);
+$("start").onchange=()=>{$("sr").value=Math.max(0,Math.min(dur,+$("start").value||0))};$("end").onchange=()=>{$("er").value=Math.max(0,Math.min(dur,+$("end").value||dur))};
+$("preview").onclick=()=>{let s=Math.max(0,+$("start").value||0),e=Math.min(dur,+$("end").value||dur);if(e<=s){alert("End must be after start.");return}$("vid").hidden=false;$("vid").currentTime=s;stopAt=e;$("vid").play().catch(()=>{});};
+$("vid").ontimeupdate=()=>{if($("vid").currentTime>=stopAt&&stopAt>0)$("vid").pause()};
+$("toConvert").onclick=()=>{if(+$("end").value<=+$("start").value){alert("End must be after start.");return}page(3)};
+document.querySelectorAll("[data-f]").forEach(b=>b.onclick=()=>{document.querySelectorAll("[data-f]").forEach(x=>x.classList.remove("selected"));b.classList.add("selected");fmt=b.dataset.f});
+async function loadFFmpeg(){ $("status").textContent="Loading converter…\nDownloading the converter for this device.";const base="https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.10/dist/umd";const {FFmpeg}=await import("https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.12.10/dist/esm/index.js");const {toBlobURL}=await import("https://cdn.jsdelivr.net/npm/@ffmpeg/util@0.12.2/dist/esm/index.js");let f=new FFmpeg();let core=await toBlobURL(base+"/ffmpeg-core.js","text/javascript");let wasm=await toBlobURL(base+"/ffmpeg-core.wasm","application/wasm");await f.load({coreURL:core,wasmURL:wasm});return f}
+$("go").onclick=async()=>{try{$("go").disabled=true;let f=await loadFFmpeg();$("status").textContent="Converter loaded.\nProcessing your selection…";let ext=(file.name.match(/\.[^.]+$/)||[".mp4"])[0],inp="input"+ext;await f.writeFile(inp,new Uint8Array(await file.arrayBuffer()));let s=+$("start").value,e=+$("end").value,len=Math.max(.1,e-s),out="output."+fmt,args=fmt==="wav"?["-ss",s,"-i",inp,"-t",len,"-vn","-ac","2","-ar","44100",out]:fmt==="mp3"?["-ss",s,"-i",inp,"-t",len,"-vn","-c:a","libmp3lame","-q:a","2",out]:["-ss",s,"-i",inp,"-t",len,"-vn","-c:a","aac","-b:a","192k",out];await f.exec(args);let data=await f.readFile(out),mime=fmt==="wav"?"audio/wav":fmt==="mp3"?"audio/mpeg":"audio/mp4",url=URL.createObjectURL(new Blob([data.buffer],{type:mime}));$("audio").src=url;$("result").innerHTML=`<b>Your Audio File</b><br>${out}<br>${len.toFixed(1)} seconds`;$("save").innerHTML=`<a class="download" href="${url}" download="${out}">⬇ Save / Download</a>`;page(4)}catch(e){$("status").textContent="Converter failed: "+(e.message||e)+"\n\nSend me a screenshot if this happens."; $("status").className="status error"}finally{$("go").disabled=false}};
+$("again").onclick=()=>location.reload();if("serviceWorker"in navigator)navigator.serviceWorker.register("./sw.js").catch(()=>{});
 </script></body></html>
